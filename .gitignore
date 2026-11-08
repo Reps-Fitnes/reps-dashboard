@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+*.p8
+*.pem
+*.key
+workspace*.json
+node_modules/
+.DS_Store
