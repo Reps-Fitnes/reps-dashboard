@@ -1,3 +1,19 @@
+# Reps Control Room website
+
+Open **https://reps-fitnes.github.io/reps-dashboard/** and enter the shared dashboard password. The password is verified by the Cloudflare backend before any workspace data loads. It is stored as a runtime secret, never in this repository.
+
+- **Website:** GitHub Pages, deployed from `main` / root.
+- **Backend:** `reps-control-room-api` in the owner's Cloudflare account, with D1 database `reps-control-room`.
+- **Current source:** run `node cloudflare-source.mjs new-output-directory` to extract the website, backend, deployment configuration and setup notes. Do not commit runtime secret values or exported workspace data.
+- **Protection:** signed sessions expire after one hour; repeated login attempts are limited. Lock clears the session from the current browser. Anyone with the shared password has the same dashboard access; GitHub collaborator membership is not checked.
+- **Repository visibility:** public source and patch history remain readable on GitHub. The password protects live dashboard data and edits, not committed files.
+- **History:** 171 documented entries through build 81; the original idea date remains approximate.
+- **Analytics and backend integrations:** retain their existing connection status. Publishing does not automatically connect App Store analytics, Google Sheets or Supabase credentials.
+
+The files `hosted-source.mjs` and `HOSTED.md` describe the earlier Sites deployment. The material below documents the original local version.
+
+---
+
 # Reps Control Room
 
 Private operations dashboard for **Reps: Train & Track**, owned by Harshavardhan Parthiban.
