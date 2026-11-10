@@ -1,5 +1,5 @@
 // Cache the public sign-in shell only. Never intercept or cache the private API.
-const CACHE='reps-control-room-shell-v1';
+const CACHE='reps-control-room-shell-v2';
 const ROOT=new URL('./',self.location.href).pathname;
 const MANIFEST=new URL('./manifest.webmanifest',self.location.href).pathname;
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll([ROOT,MANIFEST])).then(()=>self.skipWaiting()))});
