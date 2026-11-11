@@ -91,3 +91,7 @@ Repository privacy does not secure an independently hosted dashboard. This serve
 5. Export a workspace backup.
 
 © 2026 Harshavardhan Parthiban. All rights reserved.
+
+## Transparent browser icon — 12 November 2026
+
+The tab favicon, Apple touch icon and general manifest icons use the current mint wing PNG with an alpha channel, without a baked-in white/black tile. Versioned local asset URLs refresh cached icons. The Android maskable icon keeps its existing full background and safe area. Safari/macOS controls the system backdrop; websites cannot supply native Icon Composer layers or force Liquid Glass rendering. Existing installed web apps may retain their old icon until re-added.
